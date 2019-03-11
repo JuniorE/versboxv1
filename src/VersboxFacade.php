@@ -1,21 +1,21 @@
 <?php
 
-namespace JuniorE\Versbox;
+    namespace JuniorE\Versbox;
 
-use Illuminate\Support\Facades\Facade;
+    use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \JuniorE\Versbox\Skeleton\SkeletonClass
- */
-class VersboxFacade extends Facade
-{
     /**
-     * Get the registered name of the component.
-     *
-     * @return string
+     * @see \JuniorE\Versbox\Skeleton\SkeletonClass
      */
-    protected static function getFacadeAccessor()
+    class VersboxFacade extends Facade
     {
-        return 'versbox';
+        /**
+         * Get the registered name of the component.
+         *
+         * @return string
+         */
+        protected static function getFacadeAccessor()
+        {
+            return 'versbox';
+        }
     }
-}
