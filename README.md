@@ -1,4 +1,4 @@
-# Very short description of the package
+# Laravel versbox integration
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/juniore/versbox.svg?style=flat-square)](https://packagist.org/packages/juniore/versbox)
 [![Build Status](https://img.shields.io/travis/juniore/versbox/master.svg?style=flat-square)](https://travis-ci.org/juniore/versbox)
