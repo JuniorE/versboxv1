@@ -4,6 +4,8 @@
 
 
     use Exception;
+    use GuzzleHttp\Client;
+    use GuzzleHttp\RequestOptions;
     use GuzzleHttp\Exception\GuzzleException;
     use GuzzleHttp\Exception\RequestException;
     use Illuminate\Contracts\Config\Repository;
@@ -15,7 +17,7 @@
         private const BASE_URI = 'https://api.cloudlatching.eu/api/public/v1/latches/allocation/temporary';
 
         /**
-         * @var \GuzzleHttp\Client
+         * @var Client
          */
         protected $client;
 
@@ -24,24 +26,24 @@
          */
         protected $config;
 
-        public function __construct(Repository $config, \GuzzleHttp\Client $client = null)
+        public function __construct(Repository $config, Client $client = null)
         {
             $this->config = $config;
-            $this->client = $client ? $client : new \GuzzleHttp\Client([
-                'headers' => [
+            $this->client = $client ?: new Client([
+                RequestOptions::HEADERS => [
                     'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
                     'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
                     'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code')
                 ],
-                'verify'  => false
+                RequestOptions::VERIFY  => false
             ]);
         }
 
         /**
          *
          * @param string $firstname
-         * @param string $last_name
+         * @param string $lastname
          * @param string $mobile
          * @param string $email
          * @param string $notifications
@@ -52,11 +54,11 @@
          * @return mixed
          * @throws GuzzleException
          */
-        public function allocateLatch(string $firstname, string $last_name, string $mobile, string $email, string $notifications, string $pickup_date_time, string $disability, string $api_reference, string $service_location_code = null)
+        public function allocateLatch(string $firstname, string $lastname, string $mobile, string $email, string $notifications, string $pickup_date_time, string $disability, string $api_reference, string $service_location_code = null)
         {
-            $data = [
+            $arrQueryParams = [
                 'first_name'                => $firstname,
-                'last_name'                 => $last_name,
+                'last_name'                 => $lastname,
                 'mobile_number_1'           => $mobile,
                 'e_mail_address_1'          => $email,
                 'ready_notification_method' => $notifications,
@@ -65,20 +67,20 @@
                 'api_reference'             => $api_reference
             ];
             if ($service_location_code) {
-                array_unshift($data, ['service_location_code' => $service_location_code]);
+                array_unshift($arrQueryParams, ['service_location_code' => $service_location_code]);
             }
             try {
                 $response = $this->client->request(
                     'POST',
                     static::BASE_URI,
                     [
-                        \    GuzzleHttp\RequestOptions::QUERY => $data
+                        RequestOptions::QUERY => $arrQueryParams
                     ]
                 );
+                return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
             } catch (RequestException $exception) {
                 throw new Exception($exception->getMessage());
             }
-            return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
         }
 
         public function setAllocatedLatchReadyByReference(string $api_reference, string $mobile)
@@ -88,16 +90,16 @@
                     'POST',
                     static::BASE_URI,
                     [
-                        \    GuzzleHttp\RequestOptions::QUERY => [
-                            'api_reference' => $api_reference,
+                        RequestOptions::QUERY => [
+                            'api_reference'   => $api_reference,
                             'mobile_number_1' => $mobile
                         ]
                     ]
                 );
+                return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
             } catch (RequestException $exception) {
                 throw new Exception($exception->getMessage());
             }
-            return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
         }
 
 

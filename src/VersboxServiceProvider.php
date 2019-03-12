@@ -3,9 +3,9 @@
     namespace JuniorE\Versbox;
 
 
-    use GuzzleHttp\Client;
     use Illuminate\Support\ServiceProvider;
-    use Illuminate\Contracts\Config\Repository;
+    use JuniorE\Versbox\Console\AllocateCommand;
+    use JuniorE\Versbox\Console\ClearCommand;
 
     class VersboxServiceProvider extends ServiceProvider
     {
@@ -19,7 +19,7 @@
              */
             // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'versbox');
             // $this->loadViewsFrom(__DIR__.'/../resources/views', 'versbox');
-            // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
             // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
             if ($this->app->runningInConsole()) {
@@ -43,7 +43,10 @@
                 ], 'lang');*/
 
                 // Registering package commands.
-                // $this->commands([]);
+                $this->commands([
+                    AllocateCommand::class,
+                    ClearCommand::class
+                ]);
             }
         }
 

@@ -52,7 +52,7 @@
         "JuniorE\\Versbox\\VersboxServiceProvider"
       ],
       "aliases": {
-        "Versbox": "JuniorE\\Versbox\\Facades\\VersboxFacade"
+        "Versbox": "JuniorE\\Versbox\\VersboxFacade"
       }
     }
   }
