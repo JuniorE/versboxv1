@@ -6,9 +6,6 @@
      * Time: 10:30
      */
 
-    namespace JuniorE\Versbox\database\migrations;
-
-
     use Illuminate\Database\Migrations\Migration;
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
@@ -33,9 +30,9 @@
                  * EMailPrefered	32
                 */
                 $table->string('notifications')->default('45');
-                $table->dateTime('pickup_date_time');
-                $table->boolean('disability')->default('false');
-                $table->integer('order_id');
+                $table->dateTime('pickup_date_time')->index('time');
+                $table->boolean('disability')->default(false);
+                $table->integer('order_id')->unique();
                 $table->string('service_location_code', 75)->nullable();
                 $table->timestamps();
             });

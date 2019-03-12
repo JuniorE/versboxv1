@@ -44,8 +44,8 @@
 
                 // Registering package commands.
                 $this->commands([
-                    AllocateCommand::class,
-                    ClearCommand::class
+                    ClearCommand::class,
+                    AllocateCommand::class
                 ]);
             }
         }

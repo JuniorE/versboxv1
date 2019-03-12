@@ -41,11 +41,15 @@
          */
         public function handle()
         {
-            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-            foreach ($this->tables as $table) {
-                DB::table($table)->truncate();
+            if ($this->confirm('Are you sure you wish to continue?')) {
+                DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+                foreach ($this->tables as $table) {
+                    DB::table($table)->truncate();
+                }
+                DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+                $this->info('You just wiped all the records away!');
+                $this->info('Database table Versbox successfully truncated!');
             }
-            DB::statement('SET FOREIGN_KEY_CHECKS=1;');
             return true;
         }
     }

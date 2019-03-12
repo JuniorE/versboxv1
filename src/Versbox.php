@@ -9,6 +9,8 @@
     use GuzzleHttp\Exception\GuzzleException;
     use GuzzleHttp\Exception\RequestException;
     use Illuminate\Contracts\Config\Repository;
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\DB;
 
 
     class Versbox
@@ -36,7 +38,7 @@
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
                     'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code')
                 ],
-                RequestOptions::VERIFY  => false
+                'verify'                => false
             ]);
         }
 
@@ -54,7 +56,7 @@
          * @return mixed
          * @throws GuzzleException
          */
-        public function allocateLatch(string $firstname, string $lastname, string $mobile, string $email, string $notifications, string $pickup_date_time, string $disability, string $api_reference, string $service_location_code = null)
+        public function allocateLatch(string $firstname, string $lastname, string $mobile, string $email, string $notifications, string $pickup_date_time, string $disability, string $api_reference, $service_location_code = null)
         {
             $arrQueryParams = [
                 'first_name'                => $firstname,
@@ -63,12 +65,14 @@
                 'e_mail_address_1'          => $email,
                 'ready_notification_method' => $notifications,
                 'pickup_date_time'          => $pickup_date_time,
-                'disability'                => $disability,
-                'api_reference'             => $api_reference
+                'disability'                => $disability != 0,
+                'api_reference'             => (string) $api_reference
             ];
-            if ($service_location_code) {
-                array_unshift($arrQueryParams, ['service_location_code' => $service_location_code]);
+
+            if ($service_location_code != null) {
+                $arrQueryParams['service_location_code'] = $service_location_code;
             }
+
             try {
                 $response = $this->client->request(
                     'POST',
@@ -100,6 +104,54 @@
             } catch (RequestException $exception) {
                 throw new Exception($exception->getMessage());
             }
+        }
+
+        public function getPendingVersboxAllocations()
+        {
+            return DB::table('versbox')
+                ->where('status', '=', 0)
+                ->whereRaw('(pickup_date_time >= NOW()) AND (pickup_date_time <= DATE_ADD(NOW(), INTERVAL 12 HOUR))')
+                ->select([
+                    'firstname',
+                    'lastname',
+                    'mobile',
+                    'email',
+                    'notifications',
+                    'pickup_date_time',
+                    'disability',
+                    'order_id',
+                    'service_location_code',
+                    'status'
+                ])->orderBy('pickup_date_time')->get();
+        }
+
+        /**
+         * @param string $firstname
+         * @param string $lastname
+         * @param string $mobile
+         * @param string $email
+         * @param string $notifications
+         * @param string $pickup_date_time
+         * @param bool $disability
+         * @param string $api_reference
+         * @param string|null $service_location_code
+         * @return bool
+         */
+        public function save(string $firstname, string $lastname, string $mobile, string $email, string $notifications, string $pickup_date_time, bool $disability, string $api_reference, string $service_location_code = null)
+        {
+            return DB::table('versbox')->insert([
+                'firstname'             => $firstname,
+                'lastname'              => $lastname,
+                'mobile'                => $mobile,
+                'email'                 => $email,
+                'notifications'         => $notifications,
+                'pickup_date_time'      => $pickup_date_time,
+                'disability'            => $disability,
+                'order_id'              => $api_reference,
+                'service_location_code' => $service_location_code,
+                'created_at'            => now(),
+                'updated_at'            => now()
+            ]);
         }
 
 
