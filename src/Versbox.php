@@ -1,21 +1,17 @@
 <?php
 
-    namespace JuniorE\Versbox;
+namespace JuniorE\Versbox;
 
-
-    use Exception;
+use Exception;
     use GuzzleHttp\Client;
     use GuzzleHttp\RequestOptions;
+    use Illuminate\Support\Facades\DB;
     use GuzzleHttp\Exception\GuzzleException;
     use GuzzleHttp\Exception\RequestException;
     use Illuminate\Contracts\Config\Repository;
-    use Illuminate\Http\Request;
-    use Illuminate\Support\Facades\DB;
-
 
     class Versbox
     {
-
         private const BASE_URI = 'https://api.cloudlatching.eu/api/public/v1/latches/allocation/temporary';
 
         /**
@@ -36,14 +32,13 @@
                     'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
                     'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
-                    'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code')
+                    'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
                 ],
-                'verify'                => false
+                'verify'                => false,
             ]);
         }
 
         /**
-         *
          * @param string $firstname
          * @param string $lastname
          * @param string $mobile
@@ -66,7 +61,7 @@
                 'ready_notification_method' => $notifications,
                 'pickup_date_time'          => $pickup_date_time,
                 'disability'                => $disability != 0,
-                'api_reference'             => (string) $api_reference
+                'api_reference'             => (string) $api_reference,
             ];
 
             if ($service_location_code != null) {
@@ -78,9 +73,10 @@
                     'POST',
                     static::BASE_URI,
                     [
-                        RequestOptions::QUERY => $arrQueryParams
+                        RequestOptions::QUERY => $arrQueryParams,
                     ]
                 );
+
                 return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
             } catch (RequestException $exception) {
                 throw new Exception($exception->getMessage());
@@ -96,10 +92,11 @@
                     [
                         RequestOptions::QUERY => [
                             'api_reference'   => $api_reference,
-                            'mobile_number_1' => $mobile
-                        ]
+                            'mobile_number_1' => $mobile,
+                        ],
                     ]
                 );
+
                 return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
             } catch (RequestException $exception) {
                 throw new Exception($exception->getMessage());
@@ -121,7 +118,7 @@
                     'disability',
                     'order_id',
                     'service_location_code',
-                    'status'
+                    'status',
                 ])->orderBy('pickup_date_time')->get();
         }
 
@@ -150,9 +147,7 @@
                 'order_id'              => $api_reference,
                 'service_location_code' => $service_location_code,
                 'created_at'            => now(),
-                'updated_at'            => now()
+                'updated_at'            => now(),
             ]);
         }
-
-
     }

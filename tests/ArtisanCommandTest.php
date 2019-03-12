@@ -1,9 +1,8 @@
 <?php
 
-    namespace JuniorE\Versbox\Tests;
+namespace JuniorE\Versbox\Tests;
 
-
-    use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
     class ArtisanCommandTest extends TestCase
     {

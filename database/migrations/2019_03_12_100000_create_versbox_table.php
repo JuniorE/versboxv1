@@ -3,16 +3,14 @@
      * Created by PhpStorm.
      * User: JuniorE.
      * Date: 2019-03-12
-     * Time: 10:30
+     * Time: 10:30.
      */
-
-    use Illuminate\Database\Migrations\Migration;
-    use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
+    use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Database\Migrations\Migration;
 
     class CreateVersboxTable extends Migration
     {
-
         public function up()
         {
             Schema::create('versbox', function (Blueprint $table) {
@@ -42,6 +40,4 @@
         {
             Schema::dropIfExists('versbox');
         }
-
-
     }

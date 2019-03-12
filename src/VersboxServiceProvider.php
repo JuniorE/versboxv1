@@ -1,11 +1,10 @@
 <?php
 
-    namespace JuniorE\Versbox;
+namespace JuniorE\Versbox;
 
-
-    use Illuminate\Support\ServiceProvider;
-    use JuniorE\Versbox\Console\AllocateCommand;
+use Illuminate\Support\ServiceProvider;
     use JuniorE\Versbox\Console\ClearCommand;
+    use JuniorE\Versbox\Console\AllocateCommand;
 
     class VersboxServiceProvider extends ServiceProvider
     {
@@ -19,12 +18,12 @@
              */
             // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'versbox');
             // $this->loadViewsFrom(__DIR__.'/../resources/views', 'versbox');
-            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
             // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
             if ($this->app->runningInConsole()) {
                 $this->publishes([
-                    __DIR__ . '/../config/config.php' => config_path('versbox.php'),
+                    __DIR__.'/../config/config.php' => config_path('versbox.php'),
                 ], 'config');
 
                 // Publishing the views.
@@ -45,7 +44,7 @@
                 // Registering package commands.
                 $this->commands([
                     ClearCommand::class,
-                    AllocateCommand::class
+                    AllocateCommand::class,
                 ]);
             }
         }
@@ -56,7 +55,7 @@
         public function register()
         {
             // Automatically apply the package configuration
-            $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'versbox');
+            $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'versbox');
 
             // Register the main class to use with the facade
             $this->app->singleton('versbox', function ($app) {

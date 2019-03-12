@@ -1,8 +1,8 @@
 <?php
 
-    namespace JuniorE\Versbox;
+namespace JuniorE\Versbox;
 
-    use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Facade;
 
     /**
      * @see \JuniorE\Versbox\Skeleton\SkeletonClass

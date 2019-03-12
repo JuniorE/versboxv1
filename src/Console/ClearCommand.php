@@ -3,15 +3,14 @@
      * Created by PhpStorm.
      * User: JuniorE.
      * Date: 2019-03-12
-     * Time: 11:20
+     * Time: 11:20.
      */
 
-    namespace JuniorE\Versbox\Console;
+namespace JuniorE\Versbox\Console;
 
-
+use JuniorE\Versbox\Versbox;
     use Illuminate\Console\Command;
     use Illuminate\Support\Facades\DB;
-    use JuniorE\Versbox\Versbox;
 
     class ClearCommand extends Command
     {
@@ -50,6 +49,7 @@
                 $this->info('You just wiped all the records away!');
                 $this->info('Database table Versbox successfully truncated!');
             }
+
             return true;
         }
     }
