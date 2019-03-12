@@ -3,13 +3,12 @@
      * Created by PhpStorm.
      * User: JuniorE.
      * Date: 2019-03-12
-     * Time: 11:12
+     * Time: 11:12.
      */
 
-    namespace JuniorE\Versbox\Console;
+namespace JuniorE\Versbox\Console;
 
-
-    use Versbox;
+use Versbox;
     use Exception;
     use Carbon\Carbon;
     use Illuminate\Console\Command;
@@ -26,7 +25,8 @@
          */
         protected $versbox;
 
-        public function __construct(\JuniorE\Versbox\Versbox $versbox) {
+        public function __construct(\JuniorE\Versbox\Versbox $versbox)
+        {
             parent::__construct();
             $this->versbox = $versbox;
         }
@@ -39,8 +39,9 @@
         public function handle()
         {
             $orders = $this->versbox->getPendingVersboxAllocations();
-            if ( !$orders) {
+            if (! $orders) {
                 $this->info('There are no orders to allocate.');
+
                 return true;
             }
             $bar = $this->output->createProgressBar(count($orders));
@@ -53,7 +54,7 @@
                         $order->mobile,
                         $order->email,
                         $order->notifications,
-                        Carbon::parse($order->pickup_date_time)->format('Y-m-d') . 'T' . Carbon::parse($order->pickup_date_time)->format('H:i:s'),
+                        Carbon::parse($order->pickup_date_time)->format('Y-m-d').'T'.Carbon::parse($order->pickup_date_time)->format('H:i:s'),
                         $order->disability,
                         $order->order_id,
                         $order->service_location_code != null ?: null
@@ -75,8 +76,7 @@
                 }
             }
             $bar->finish();
+
             return true;
         }
-
-
     }
