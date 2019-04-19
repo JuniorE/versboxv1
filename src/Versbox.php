@@ -2,7 +2,6 @@
 
 namespace JuniorE\Versbox;
 
-use Exception;
     use GuzzleHttp\Client;
     use GuzzleHttp\RequestOptions;
     use Illuminate\Support\Facades\DB;
@@ -34,7 +33,7 @@ use Exception;
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
                     'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
                 ],
-                'verify'                => false,
+                RequestOptions::VERIFY => false,
             ]);
         }
 
@@ -79,7 +78,7 @@ use Exception;
 
                 return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
             } catch (RequestException $exception) {
-                throw new Exception($exception->getMessage());
+                throw $exception;
             }
         }
 
@@ -99,7 +98,7 @@ use Exception;
 
                 return json_decode($response->getBody()->read($response->getBody()->getSize()), JSON_PRETTY_PRINT);
             } catch (RequestException $exception) {
-                throw new Exception($exception->getMessage());
+                throw $exception;
             }
         }
 
