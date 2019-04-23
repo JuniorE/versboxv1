@@ -32,6 +32,7 @@
                 $table->boolean('disability')->default(false);
                 $table->integer('order_id')->unique();
                 $table->string('service_location_code', 75)->nullable();
+                $table->boolean('status')->default(false);
                 $table->timestamps();
             });
         }

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a83b432d-e211-4172-9f35-1f0296a5cfcc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Versbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Versbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,14 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Versbox.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1872">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
-              <folding>
-                <element signature="e#39#61#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="46">
+              <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -65,11 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VersboxServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="-15">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -77,11 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
+            <state relative-caret-position="988">
               <caret line="43" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="e#153#165#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -89,11 +91,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/ClearCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="260">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#10#115#0#PHP" expanded="true" />
-                <element signature="e#153#181#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,12 +140,12 @@
         <option value="$PROJECT_DIR$/src/VersboxManager.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/src/VersboxServiceProvider.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/tests/ArtisanCommandTest.php" />
         <option value="$PROJECT_DIR$/src/Console/ClearCommand.php" />
         <option value="$PROJECT_DIR$/src/Console/AllocateCommand.php" />
         <option value="$PROJECT_DIR$/src/Versbox.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php" />
       </list>
     </option>
   </component>
@@ -241,7 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,10 +249,22 @@
               <item name="versbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="versbox" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="versbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="versbox" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="versbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="versbox" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,6 +366,7 @@
       <workItem from="1552405962554" duration="6570000" />
       <workItem from="1552419495956" duration="5305000" />
       <workItem from="1552462972025" duration="434000" />
+      <workItem from="1556006225567" duration="180000" />
     </task>
     <servers />
   </component>
@@ -384,13 +397,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49181000" />
+    <option name="totallyTimeSpent" value="49361000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22710623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22949947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -592,53 +605,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#10#114#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Versbox.php">
+    <entry file="file://$PROJECT_DIR$/tests/ArtisanCommandTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#39#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VersboxFacade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="286">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
+        <state relative-caret-position="988">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#153#165#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/ClearCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="260">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="e#10#115#0#PHP" expanded="true" />
-            <element signature="e#153#181#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -650,17 +639,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ArtisanCommandTest.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state relative-caret-position="545">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VersboxServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="-15">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VersboxFacade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Versbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
         </state>
       </provider>
     </entry>
