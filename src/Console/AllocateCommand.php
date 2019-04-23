@@ -6,9 +6,9 @@
      * Time: 11:12.
      */
 
-namespace JuniorE\Versbox\Console;
+    namespace JuniorE\Versbox\Console;
 
-use Versbox;
+    use Versbox;
     use Exception;
     use Carbon\Carbon;
     use Illuminate\Console\Command;
@@ -39,9 +39,8 @@ use Versbox;
         public function handle()
         {
             $orders = $this->versbox->getPendingVersboxAllocations();
-            if (! $orders) {
+            if ( !$orders) {
                 $this->info('There are no orders to allocate.');
-
                 return true;
             }
             $bar = $this->output->createProgressBar(count($orders));
@@ -54,7 +53,7 @@ use Versbox;
                         $order->mobile,
                         $order->email,
                         $order->notifications,
-                        Carbon::parse($order->pickup_date_time)->format('Y-m-d').'T'.Carbon::parse($order->pickup_date_time)->format('H:i:s'),
+                        Carbon::parse($order->pickup_date_time)->format('Y-m-d') . 'T' . Carbon::parse($order->pickup_date_time)->format('H:i:s'),
                         $order->disability,
                         $order->order_id,
                         $order->service_location_code != null ?: null
@@ -66,17 +65,18 @@ use Versbox;
                     $this->error($exception->getMessage());
                     throw $exception;
                 } finally {
-                    $this->info($response['message']);
-                    if ($response['success'] == true) {
-                        DB::table('versbox')
-                            ->where('order_id', '=', $order->order_id)
-                            ->update(['status' => 1]);
+                    if (isset($response['success'])) {
+                        $this->info($response['message']);
+                        if ($response['success'] == true) {
+                            DB::table('versbox')
+                                ->where('order_id', '=', $order->order_id)
+                                ->update(['status' => 1]);
+                        }
                     }
                     $bar->advance();
                 }
             }
             $bar->finish();
-
             return true;
         }
     }

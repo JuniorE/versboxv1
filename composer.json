@@ -18,12 +18,12 @@
   "require": {
     "php": "^7.1",
     "guzzlehttp/guzzle": "^6.3",
+    "illuminate/console": "5.7.*",
     "illuminate/support": "5.7.*",
     "symfony/psr-http-message-bridge": "^1.2",
     "zendframework/zend-diactoros": "^1.8.6"
   },
   "require-dev": {
-    "orchestra/testbench": "3.8.*",
     "phpunit/phpunit": "^8.0"
   },
   "autoload": {

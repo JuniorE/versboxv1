@@ -46,7 +46,7 @@ use JuniorE\Versbox\Versbox;
                     DB::table($table)->truncate();
                 }
                 DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-                $this->info('You just wiped all the records away!');
+                $this->info('You just wiped away all the records!');
                 $this->info('Database table Versbox successfully truncated!');
             }
 

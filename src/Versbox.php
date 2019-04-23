@@ -2,6 +2,7 @@
 
 namespace JuniorE\Versbox;
 
+    use Log;
     use GuzzleHttp\Client;
     use GuzzleHttp\RequestOptions;
     use Illuminate\Support\Facades\DB;
@@ -33,8 +34,9 @@ namespace JuniorE\Versbox;
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
                     'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
                 ],
-                RequestOptions::VERIFY => false,
+                'verify' => false,
             ]);
+            Log::debug(json_encode($this->client->getConfig()));
         }
 
         /**
@@ -73,6 +75,13 @@ namespace JuniorE\Versbox;
                     static::BASE_URI,
                     [
                         RequestOptions::QUERY => $arrQueryParams,
+                        'verify' => false,
+                        RequestOptions::HEADERS => [
+                            'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
+                            'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
+                            'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
+                            'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
+                        ],
                     ]
                 );
 
@@ -92,6 +101,13 @@ namespace JuniorE\Versbox;
                         RequestOptions::QUERY => [
                             'api_reference'   => $api_reference,
                             'mobile_number_1' => $mobile,
+                        ],
+                        'verify' => false,
+                        RequestOptions::HEADERS => [
+                            'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
+                            'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
+                            'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
+                            'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
                         ],
                     ]
                 );
