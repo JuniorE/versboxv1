@@ -192,4 +192,10 @@ namespace JuniorE\Versbox;
             }
 
         }
+
+        public function updateStatus(int $orderId, int $status) {
+            DB::table('versbox')
+                ->where('order_id', '=', $orderId)
+                ->update(['status' => $status]);
+        }
     }

@@ -42,7 +42,7 @@
         {
             foreach ($this->argument('api_reference') as $item) {
                 $response = $this->versbox->readyOrReleaseAllactionLatch('PUT', $item);
-                $this->info($response->success);
+                $this->info($response->getBody());
             }
             return true;
         }

@@ -68,9 +68,7 @@
                     if (isset($response['success'])) {
                         $this->info($response['message']);
                         if ($response['success'] == true) {
-                            DB::table('versbox')
-                                ->where('order_id', '=', $order->order_id)
-                                ->update(['status' => 1]);
+                            $this->versbox->updateStatus($order->order_id, 1);
                         }
                     }
                     $bar->advance();

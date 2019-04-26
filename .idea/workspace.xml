@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a83b432d-e211-4172-9f35-1f0296a5cfcc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Console/ReadyCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Console/ReleaseCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/AllocateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/AllocateCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/ReadyCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/ReadyCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Versbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Versbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VersboxServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VersboxServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +44,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Versbox.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1184">
-              <caret line="119" column="9" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="119" selection-end-column="9" />
+            <state relative-caret-position="469">
+              <caret line="197" column="50" lean-forward="true" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="50" />
+              <folding>
+                <element signature="e#3619#4861#0#PHP" />
+                <element signature="e#5967#6884#0#PHP" />
+                <element signature="e#7993#9097#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,17 +61,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/ReadyCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+            <state relative-caret-position="207">
+              <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/ReleaseCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+            <state relative-caret-position="515">
+              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -78,6 +81,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
               <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -118,12 +130,12 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/src/Console/AllocateCommand.php" />
         <option value="$PROJECT_DIR$/src/Console/ClearCommand.php" />
-        <option value="$PROJECT_DIR$/src/Versbox.php" />
         <option value="$PROJECT_DIR$/src/VersboxServiceProvider.php" />
-        <option value="$PROJECT_DIR$/src/Console/ReadyCommand.php" />
         <option value="$PROJECT_DIR$/src/Console/ReleaseCommand.php" />
+        <option value="$PROJECT_DIR$/src/Console/ReadyCommand.php" />
+        <option value="$PROJECT_DIR$/src/Console/AllocateCommand.php" />
+        <option value="$PROJECT_DIR$/src/Versbox.php" />
       </list>
     </option>
   </component>
@@ -286,11 +298,11 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Versbox.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
-      <item itemvalue="PHPUnit.ExampleTest" />
       <item itemvalue="PHPUnit.ArtisanCommandTest" />
-      <item itemvalue="PHPUnit.ArtisanCommandTest.true_is_true" />
       <item itemvalue="PHPUnit.ArtisanCommandTest.test_versbox_clear_artisan_command" />
+      <item itemvalue="PHPUnit.ArtisanCommandTest.true_is_true" />
+      <item itemvalue="PHPUnit.ExampleTest" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -321,7 +333,7 @@
       <workItem from="1556013595124" duration="6347000" />
       <workItem from="1556027252417" duration="121000" />
       <workItem from="1556030693683" duration="46000" />
-      <workItem from="1556277463182" duration="2389000" />
+      <workItem from="1556277463182" duration="4357000" />
     </task>
     <servers />
   </component>
@@ -352,7 +364,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58538000" />
+    <option name="totallyTimeSpent" value="60506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -616,20 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Versbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1184">
-          <caret line="119" column="9" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="119" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VersboxServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -637,17 +635,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/ReadyCommand.php">
+    <entry file="file://$PROJECT_DIR$/src/Console/ReleaseCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+        <state relative-caret-position="515">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/ReleaseCommand.php">
+    <entry file="file://$PROJECT_DIR$/src/Console/ReadyCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        <state relative-caret-position="207">
+          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Versbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="197" column="50" lean-forward="true" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="50" />
+          <folding>
+            <element signature="e#3619#4861#0#PHP" />
+            <element signature="e#5967#6884#0#PHP" />
+            <element signature="e#7993#9097#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
