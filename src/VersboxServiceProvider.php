@@ -5,8 +5,10 @@ namespace JuniorE\Versbox;
 use Illuminate\Support\ServiceProvider;
     use JuniorE\Versbox\Console\ClearCommand;
     use JuniorE\Versbox\Console\AllocateCommand;
+use JuniorE\Versbox\Console\ReadyCommand;
+use JuniorE\Versbox\Console\ReleaseCommand;
 
-    class VersboxServiceProvider extends ServiceProvider
+class VersboxServiceProvider extends ServiceProvider
     {
         /**
          * Bootstrap the application services.
@@ -45,6 +47,8 @@ use Illuminate\Support\ServiceProvider;
                 $this->commands([
                     ClearCommand::class,
                     AllocateCommand::class,
+                    ReadyCommand::class,
+                    ReleaseCommand::class
                 ]);
             }
         }

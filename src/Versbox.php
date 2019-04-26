@@ -2,6 +2,8 @@
 
 namespace JuniorE\Versbox;
 
+    use Exception;
+    use Illuminate\Support\Facades\Request;
     use Log;
     use GuzzleHttp\Client;
     use GuzzleHttp\RequestOptions;
@@ -36,7 +38,6 @@ namespace JuniorE\Versbox;
                 ],
                 'verify' => false,
             ]);
-            Log::debug(json_encode($this->client->getConfig()));
         }
 
         /**
@@ -164,5 +165,31 @@ namespace JuniorE\Versbox;
                 'created_at'            => now(),
                 'updated_at'            => now(),
             ]);
+        }
+
+        public function readyOrReleaseAllactionLatch(string $method, int $api_reference)
+        {
+            try {
+                $response = $this->client->request(
+                    $method,
+                    static::BASE_URI,
+                    [
+                        RequestOptions::QUERY   => [
+                            'api_reference' => $api_reference,
+                        ],
+                        'verify'                => false,
+                        RequestOptions::HEADERS => [
+                            'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
+                            'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
+                            'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
+                            'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
+                        ],
+                    ]
+                );
+                return $response;
+            } catch (RequestException $exception) {
+                throw $exception;
+            }
+
         }
     }
