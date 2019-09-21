@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a83b432d-e211-4172-9f35-1f0296a5cfcc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console/AllocateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/AllocateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console/ClearCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/ClearCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VersboxServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VersboxServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Versbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Versbox.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,19 +42,6 @@
     <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
     <fileColor scope="Non-Project Files (Material Oceanic)" color="2E3C43" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>$</find>
-      <find>,</find>
-      <find>5.8</find>
-      <find>env</find>
-      <find>setAllocatedLatchReadyByReference</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>$order-&gt;</replace>
-      <replace>,</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -228,7 +212,9 @@
       <workItem from="1556291114761" duration="563000" />
       <workItem from="1558541358413" duration="123000" />
       <workItem from="1561634209999" duration="134000" />
-      <workItem from="1569080268173" duration="121000" />
+      <workItem from="1569080268173" duration="1172000" />
+      <workItem from="1569081804260" duration="188000" />
+      <workItem from="1569092956735" duration="76000" />
     </task>
     <servers />
   </component>

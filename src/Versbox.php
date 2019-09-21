@@ -1,6 +1,6 @@
 <?php
 
-namespace JuniorE\Versbox;
+    namespace JuniorE\Versbox;
 
     use Exception;
     use Illuminate\Support\Facades\Request;
@@ -36,20 +36,20 @@ namespace JuniorE\Versbox;
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
                     'CLP_API_OPERATOR_CODE' => $this->config->get('versbox.operator_code'),
                 ],
-                'verify' => false,
+                'verify'                => false,
             ]);
         }
 
         /**
-         * @param string $firstname
-         * @param string $lastname
-         * @param string $mobile
-         * @param string $email
-         * @param string $notifications
-         * @param string $pickup_date_time
-         * @param string $disability
-         * @param string $api_reference
-         * @param string $service_location_code
+         * @param  string  $firstname
+         * @param  string  $lastname
+         * @param  string  $mobile
+         * @param  string  $email
+         * @param  string  $notifications
+         * @param  string  $pickup_date_time
+         * @param  string  $disability
+         * @param  string  $api_reference
+         * @param  string  $service_location_code
          * @return mixed
          * @throws GuzzleException
          */
@@ -63,20 +63,21 @@ namespace JuniorE\Versbox;
                 'ready_notification_method' => $notifications,
                 'pickup_date_time'          => $pickup_date_time,
                 'disability'                => $disability != 0,
-                'api_reference'             => (string) $api_reference,
+                'api_reference'             => (string)$api_reference,
+                'service_location_code'     => $service_location_code
             ];
 
-            if ($service_location_code != null) {
-                $arrQueryParams['service_location_code'] = $service_location_code;
-            }
+            //if ($service_location_code != null) {
+            //    $arrQueryParams['service_location_code'] = $service_location_code;
+            //}
 
             try {
                 $response = $this->client->request(
                     'POST',
                     static::BASE_URI,
                     [
-                        RequestOptions::QUERY => $arrQueryParams,
-                        'verify' => false,
+                        RequestOptions::QUERY   => $arrQueryParams,
+                        'verify'                => false,
                         RequestOptions::HEADERS => [
                             'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
                             'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
@@ -99,11 +100,11 @@ namespace JuniorE\Versbox;
                     'POST',
                     static::BASE_URI,
                     [
-                        RequestOptions::QUERY => [
+                        RequestOptions::QUERY   => [
                             'api_reference'   => $api_reference,
                             'mobile_number_1' => $mobile,
                         ],
-                        'verify' => false,
+                        'verify'                => false,
                         RequestOptions::HEADERS => [
                             'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
                             'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
@@ -139,15 +140,15 @@ namespace JuniorE\Versbox;
         }
 
         /**
-         * @param string $firstname
-         * @param string $lastname
-         * @param string $mobile
-         * @param string $email
-         * @param string $notifications
-         * @param string $pickup_date_time
-         * @param bool $disability
-         * @param string $api_reference
-         * @param string|null $service_location_code
+         * @param  string  $firstname
+         * @param  string  $lastname
+         * @param  string  $mobile
+         * @param  string  $email
+         * @param  string  $notifications
+         * @param  string  $pickup_date_time
+         * @param  bool  $disability
+         * @param  string  $api_reference
+         * @param  string|null  $service_location_code
          * @return bool
          */
         public function save(string $firstname, string $lastname, string $mobile, string $email, string $notifications, string $pickup_date_time, bool $disability, string $api_reference, string $service_location_code = null)
@@ -193,7 +194,8 @@ namespace JuniorE\Versbox;
 
         }
 
-        public function updateStatus(int $orderId, int $status) {
+        public function updateStatus(int $orderId, int $status)
+        {
             DB::table('versbox')
                 ->where('order_id', '=', $orderId)
                 ->update(['status' => $status]);
