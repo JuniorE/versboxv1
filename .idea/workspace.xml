@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a83b432d-e211-4172-9f35-1f0296a5cfcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Console/AllocateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/AllocateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console/ReadyCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/ReadyCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Versbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Versbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/ClearCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/ClearCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VersboxServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VersboxServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,9 +14,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" executionDataType="PHAR" phpInterpreterId="e6d44830-5d91-4ee0-98f9-e1e3585655d4" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <pharPath>$PROJECT_DIR$/composer.phar</pharPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="e6d44830-5d91-4ee0-98f9-e1e3585655d4" />
+    </execution>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,60 +46,6 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
     <fileColor scope="Non-Project Files (Material Oceanic)" color="2E3C43" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Versbox.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="197" column="50" lean-forward="true" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="50" />
-              <folding>
-                <element signature="e#3619#4861#0#PHP" />
-                <element signature="e#5967#6884#0#PHP" />
-                <element signature="e#7993#9097#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Console/ReadyCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Console/ReleaseCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VersboxServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$</find>
@@ -112,32 +62,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/helpers.php" />
-        <option value="$PROJECT_DIR$/src/CloudlatchingAPIClient.php" />
-        <option value="$PROJECT_DIR$/src/VersboxAPIClient.php" />
-        <option value="$PROJECT_DIR$/src/Facade/VersboxFacade.php" />
-        <option value="$PROJECT_DIR$/src/Facades/VersboxFacade.php" />
-        <option value="$PROJECT_DIR$/src/Resources/VersboxResource.php" />
-        <option value="$PROJECT_DIR$/src/VersboxFacade.php" />
-        <option value="$PROJECT_DIR$/src/database/migrations/2019_03_12_100000_create_versbox_table.php" />
-        <option value="$PROJECT_DIR$/src/VersboxManager.php" />
-        <option value="$PROJECT_DIR$/phpunit.xml.dist" />
-        <option value="$PROJECT_DIR$/tests/ArtisanCommandTest.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/src/Console/ClearCommand.php" />
-        <option value="$PROJECT_DIR$/src/VersboxServiceProvider.php" />
-        <option value="$PROJECT_DIR$/src/Console/ReleaseCommand.php" />
-        <option value="$PROJECT_DIR$/src/Console/ReadyCommand.php" />
-        <option value="$PROJECT_DIR$/src/Console/AllocateCommand.php" />
-        <option value="$PROJECT_DIR$/src/Versbox.php" />
-      </list>
-    </option>
   </component>
   <component name="PhpServers">
     <servers />
@@ -194,40 +118,7 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="versbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="versbox" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="versbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="versbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="versbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="versbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1NE74D875IAgTKS3FRYYplazhHg" />
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -299,10 +190,10 @@
     <list>
       <item itemvalue="JavaScript Debug.Versbox.php" />
       <item itemvalue="PHPUnit.ArtisanCommandTest" />
-      <item itemvalue="PHPUnit.ArtisanCommandTest.test_versbox_clear_artisan_command" />
-      <item itemvalue="PHPUnit.ArtisanCommandTest.true_is_true" />
       <item itemvalue="PHPUnit.ExampleTest" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHPUnit.ArtisanCommandTest.test_versbox_clear_artisan_command" />
+      <item itemvalue="PHPUnit.ArtisanCommandTest.true_is_true" />
     </list>
     <recent_temporary>
       <list>
@@ -333,7 +224,11 @@
       <workItem from="1556013595124" duration="6347000" />
       <workItem from="1556027252417" duration="121000" />
       <workItem from="1556030693683" duration="46000" />
-      <workItem from="1556277463182" duration="4357000" />
+      <workItem from="1556277463182" duration="4511000" />
+      <workItem from="1556291114761" duration="563000" />
+      <workItem from="1558541358413" duration="123000" />
+      <workItem from="1561634209999" duration="134000" />
+      <workItem from="1569080268173" duration="121000" />
     </task>
     <servers />
   </component>
@@ -363,60 +258,6 @@
       <configuration name="ArtisanCommandTest.test_versbox_clear_artisan_command" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60506000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2087327" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3968254" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3037037" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.30564103" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.498779" visible="true" weight="0.18871795" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.501221" side_tool="true" weight="0.16820513" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="12" weight="0.32910052" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32967034" />
-      <window_info anchor="right" id="Json Parser" order="5" weight="0.32967034" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.47724867" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Json Parser" order="5" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -426,20 +267,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -459,214 +287,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VersboxAPIClient.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/ClientInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/coverage/VersboxFacade.php.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-271" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.styleci.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.scrutinizer.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resources/VersboxResource.php" />
-    <entry file="file://$PROJECT_DIR$/build/coverage/Versbox.php.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/logs/clover.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/report.junit.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/.phpunit.result.cache" />
-    <entry file="file://$PROJECT_DIR$/.phpunit.result.cache">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ExampleTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VersboxManager.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f7adf50f-30ee-4eb9-9ad9-8826d9057f0e/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php" />
-    <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ArtisanCommandTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/RequestOptions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-588">
-          <caret line="215" column="30" lean-forward="true" selection-start-line="215" selection-start-column="30" selection-end-line="215" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_12_100000_create_versbox_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/composer.json" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/LICENSE.md" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/composer.json" />
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="466" column="28" selection-start-line="466" selection-start-column="25" selection-end-line="466" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/support/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="581" column="26" selection-start-line="581" selection-start-column="23" selection-end-line="581" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VersboxFacade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/ClearCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-          <folding>
-            <element signature="e#10#115#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VersboxServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/ReleaseCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/ReadyCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/AllocateCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Versbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="197" column="50" lean-forward="true" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="50" />
-          <folding>
-            <element signature="e#3619#4861#0#PHP" />
-            <element signature="e#5967#6884#0#PHP" />
-            <element signature="e#7993#9097#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

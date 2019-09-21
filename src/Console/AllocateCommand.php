@@ -56,7 +56,7 @@
                         Carbon::parse($order->pickup_date_time)->format('Y-m-d') . 'T' . Carbon::parse($order->pickup_date_time)->format('H:i:s'),
                         $order->disability,
                         $order->order_id,
-                        $order->service_location_code != null ?: null
+                        $order->service_location_code ?? null
                     );
                 } catch (GuzzleException $guzzleException) {
                     $this->error($guzzleException->getMessage());
