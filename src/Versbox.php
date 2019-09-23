@@ -169,7 +169,7 @@
             try {
                 $response = $this->client->request(
                     $method,
-                    static::BASE_URI,
+                    static::BASE_URI . '/' . static::RESOURCE_URI,
                     [
                         RequestOptions::QUERY   => [
                             'api_reference' => $api_reference,
