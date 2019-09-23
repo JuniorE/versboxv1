@@ -14,7 +14,8 @@
 
     class Versbox
     {
-        private const BASE_URI = 'https://api.cloudlatching.eu/api/public/v1/latches/allocation/temporary';
+        private const BASE_URI     = 'https://api.cloudlatching.eu/api/public/v1/latches';
+        private const RESOURCE_URI = 'allocation/temporary';
 
         /**
          * @var Client
@@ -64,17 +65,12 @@
                 'pickup_date_time'          => $pickup_date_time,
                 'disability'                => $disability != 0,
                 'api_reference'             => (string)$api_reference,
-                'service_location_code'     => $service_location_code
             ];
-
-            //if ($service_location_code != null) {
-            //    $arrQueryParams['service_location_code'] = $service_location_code;
-            //}
 
             try {
                 $response = $this->client->request(
                     'POST',
-                    static::BASE_URI,
+                    static::BASE_URI . ($service_location_code ? '/' . $service_location_code . '/' : '/') . static::RESOURCE_URI,
                     [
                         RequestOptions::QUERY   => $arrQueryParams,
                         'verify'                => false,
@@ -98,7 +94,7 @@
             try {
                 $response = $this->client->request(
                     'POST',
-                    static::BASE_URI,
+                    static::BASE_URI . '/' . static::RESOURCE_URI,
                     [
                         RequestOptions::QUERY   => [
                             'api_reference'   => $api_reference,
