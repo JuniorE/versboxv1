@@ -31,7 +31,7 @@
         {
             $this->config = $config;
             $this->client = $client ?: new Client([
-                RequestOptions::HEADERS => [
+                    RequestOptions::HEADERS => [
                     'CLP_API_USER_PASSWORD' => $this->config->get('versbox.auth_password'),
                     'CLP_API_USER_E_MAIL'   => $this->config->get('versbox.auth_login'),
                     'CLP_API_SECRET'        => $this->config->get('versbox.api_secret'),
